@@ -1,0 +1,1096 @@
+    * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+    
+    @font-face {
+        font-family: "Cairo";
+        src: url("Cairo-Regular.ttf");
+    }
+    
+    @font-face {
+        font-family: "Oswald";
+        src: url("OS.ttf");
+    }
+    
+    @font-face {
+        font-family: "Lalezar";
+        src: url("Lalezar.ttf");
+    }
+    
+    @font-face {
+        font-family: "Changa";
+        src: url("Changa.ttf");
+    }
+    
+    #P1 {
+        display: none;
+    }
+    
+    body {
+        height: fit-content;
+    }
+    /*****************************************************************************************
+/************* Scroll Bar *****************/
+    
+     ::-webkit-scrollbar {
+        width: 2px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        background: #a6ff00;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background: rgb(12, 105, 0);
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: rgb(1, 56, 1);
+    }
+    /****************************************************************************************/
+    /********************** Loader ******************/
+    
+    .Loader {
+        margin: 250px auto;
+        width: 400px;
+        height: 200px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        transform-style: flat;
+        animation: ll 5s infinite ease-in-out;
+        transform: scale(0.1);
+    }
+    
+    @keyframes ll {
+        0% {
+            transform: rotateZ(0deg) rotateX(0deg);
+        }
+        50% {
+            transform: rotateZ(-360deg) rotateY(60deg) scale(1.4) rotateX(-60deg);
+        }
+        50% {
+            transform: rotateZ(260deg) rotateY(20deg) scale(2.2) rotateX(60deg);
+        }
+        100% {
+            transform: rotateZ(0deg) rotateY(0deg);
+        }
+    }
+    
+    .Loader span {
+        background-color: indigo;
+        width: 20px;
+        height: 30px;
+        margin-left: 40px;
+        box-shadow: 6px 2px 20px indigo;
+    }
+    
+    #sp1,
+    #sp2,
+    #sp3,
+    #sp4,
+    #sp5,
+    #sp6,
+    #sp7,
+    #sp8 {
+        animation-name: spn1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        border-radius: 12px;
+    }
+    
+    #sp1 {
+        animation-delay: 0.2s;
+    }
+    
+    #sp2 {
+        animation-delay: 0.4s;
+    }
+    
+    #sp3 {
+        animation-delay: 0.6s;
+    }
+    
+    #sp4 {
+        animation-delay: 0.8s;
+    }
+    
+    #sp5 {
+        animation-delay: 1s;
+    }
+    
+    #sp6 {
+        animation-delay: 1.2s;
+    }
+    
+    #sp7 {
+        animation-delay: 1.4s;
+    }
+    
+    #sp8 {
+        animation-delay: 1.5s;
+    }
+    
+    @keyframes spn1 {
+        0% {
+            height: 20px;
+        }
+        50% {
+            height: 80px;
+            background-color: rgb(136, 15, 223);
+            box-shadow: 2px 2px 80px 4px rgb(237, 0, 245);
+        }
+        70% {
+            height: 500px;
+            background-color: rgb(223, 15, 50);
+            box-shadow: 2px 2px 50px 4px rgb(245, 0, 0);
+        }
+        100% {
+            height: 20px;
+            background-color: rgb(39, 0, 130);
+        }
+    }
+    /*********** First Nav Bar *******************/
+    
+    .nav-1 {
+        height: 40px;
+        background: #e70013;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        z-index: 6;
+    }
+    
+    .nav-1 h2 {
+        align-self: flex-end;
+        color: #2ECC40;
+        font-family: Oswald;
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 5px;
+        animation: animH2 2.8s linear infinite;
+    }
+    
+    .nav-1 .ul {
+        align-self: center;
+    }
+    
+    .nav-1 .ul li {
+        margin-left: 45px;
+        display: inline;
+        font-family: Cairo;
+        font-weight: 600;
+        color: white;
+        font-size: 16px;
+        transition-duration: 1.2s;
+    }
+    
+    .nav-1 .ul li:hover {
+        color: rgb(90, 0, 0);
+        font-weight: 900;
+        font-size: 17px;
+        transition-duration: 1.2s;
+    }
+    
+    @keyframes rgb(48,
+    0,
+    0)2 {
+        100% {
+            color: rgb(255, 255, 255);
+        }
+    }
+    /*******************************************************************************************/
+    /*************** Header ***********************/
+    
+    .header {
+        height: 100vh;
+        background-image: url("pic-3.png");
+        background-size: cover;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+        display: block;
+        position: relative;
+    }
+    
+    .header h1 {
+        float: right;
+        align-self: center;
+        position: absolute;
+        font-family: Cairo;
+        z-index: 2;
+    }
+    
+    .header #Pr1 {
+        right: 90px;
+        top: 50px;
+        display: block;
+        font-size: 230px;
+        color: red;
+        font-family: Changa !important;
+        text-shadow: 2px 2px 25px red;
+    }
+    
+    .header #Pr2 {
+        right: 180px;
+        top: 300px;
+        display: block;
+        font-size: 75px;
+        color: rgb(130, 0, 0);
+        text-shadow: 2px 2px 5px rgb(255, 6, 6);
+    }
+    
+    .header #Pr3 {
+        right: 120px;
+        top: 410px;
+        display: block;
+        color: honeydew;
+        font-size: 50px;
+        text-shadow: 1px 1px 15px rgb(128, 236, 27);
+    }
+    
+    #flag {
+        display: inline;
+        position: absolute;
+        top: 209px;
+        transform: scale(0.6) rotateY(180deg);
+        right: 266px;
+        z-index: 2;
+        filter: drop-shadow(3px 3px 20px rgb(255, 255, 255));
+    }
+    /*************************************************/
+    /******** Bacteria ***************/
+    
+    .B1 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B2.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 10px;
+        left: -90px;
+        animation: animB1 6s infinite;
+        filter: drop-shadow(3px 3px 6px rgb(255, 0, 0));
+    }
+    
+    .B2 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B1.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 30px;
+        left: 60px;
+        transform: scale(0.6);
+        animation: animB2 6s infinite;
+        filter: drop-shadow(0px 0px 12px rgb(255, 0, 98));
+    }
+    
+    .B3 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B2.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 60px;
+        left: 270px;
+        transform: scale(1.8);
+        animation: animB3 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 0));
+    }
+    
+    .B4 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B3.png");
+        background-size: cover;
+        height: 400px;
+        width: 200px;
+        display: inline-block;
+        top: 230px;
+        left: 10px;
+        transform: scale(0.7);
+        animation: animB4 6s infinite;
+        filter: drop-shadow(0px 0px 10px rgb(101, 0, 114));
+    }
+    
+    .B5 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B2.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 400px;
+        left: 190px;
+        transform: scale(1.4);
+        animation: animB5 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 0));
+    }
+    
+    .B6 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B2.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 300px;
+        left: 360px;
+        transform: scale(0.4);
+        animation: animB6 6s infinite;
+        filter: drop-shadow(4px 4px 20px rgb(255, 0, 0));
+    }
+    
+    .B7 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B1.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 450px;
+        left: 460px;
+        transform: scale(1.6);
+        animation: animB7 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 106));
+    }
+    
+    .B8 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B4.png");
+        background-size: cover;
+        height: 400px;
+        width: 200px;
+        display: inline-block;
+        top: -60px;
+        left: 470px;
+        transform: scale(0.7);
+        animation: animB8 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 106));
+    }
+    
+    .B9 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B1.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 500px;
+        left: -40px;
+        transform: scale(1.2);
+        animation: animB9 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 106));
+    }
+    
+    .B10 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B2.png");
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        top: 200px;
+        left: 500px;
+        transform: scale(1.1);
+        animation: animB10 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 0));
+    }
+    
+    #PRT1 div {
+        animation-play-state: paused;
+    }
+    
+    #PRT1:hover div {
+        animation-play-state: running;
+    }
+    /*********************Animation*************/
+    
+    @keyframes animB1 {
+        0% {
+            transform: rotateZ(90deg);
+        }
+        50% {
+            transform: rotateZ(180deg);
+            top: 20px;
+            left: -120px;
+        }
+        70% {
+            transform: rotateZ(-180deg);
+        }
+        100% {
+            transform: rotateZ(90deg);
+            top: 10px;
+            left: -90px;
+        }
+    }
+    
+    @keyframes animB2 {
+        0% {
+            transform: rotateZ(-90deg) scale(0.6);
+        }
+        50% {
+            transform: rotateZ(180deg) scale(0.6);
+            top: 240px;
+            left: -50px;
+        }
+        70% {
+            transform: rotateZ(180deg) scale(0.6);
+        }
+        100% {
+            transform: rotateZ(-90deg) scale(0.6);
+            top: 30px;
+            left: 60px;
+        }
+    }
+    
+    @keyframes animB3 {
+        0% {
+            transform: rotateZ(30deg) scale(1.6);
+        }
+        50% {
+            transform: rotateZ(60deg) scale(1.6);
+            top: 40px;
+            left: 120px;
+        }
+        70% {
+            transform: rotateZ(90deg) scale(1.6);
+        }
+        100% {
+            transform: rotateZ(30deg) scale(1.6);
+            top: 60px;
+            left: 270px;
+        }
+    }
+    
+    @keyframes animB4 {
+        0% {
+            transform: rotateZ(20deg) scale(0.7);
+        }
+        50% {
+            transform: rotateZ(-20deg) scale(0.7);
+            top: 140px;
+            left: 80px;
+        }
+        70% {
+            transform: rotateZ(60deg) scale(0.7);
+        }
+        100% {
+            transform: rotateZ(20deg) scale(0.7);
+            top: 230px;
+            left: 10px;
+        }
+    }
+    
+    @keyframes animB5 {
+        0% {
+            transform: rotateZ(20deg) scale(1.4);
+        }
+        50% {
+            transform: rotateZ(60deg) scale(1.4);
+            top: 470px;
+            left: 290px;
+        }
+        70% {
+            transform: rotateZ(-40deg) scale(1.4);
+        }
+        100% {
+            transform: rotateZ(50deg) scale(1.4);
+            top: 400px;
+            left: 190px;
+        }
+    }
+    
+    @keyframes animB6 {
+        0% {
+            transform: rotateZ(10deg) scale(0.4);
+        }
+        50% {
+            transform: rotateZ(180deg) scale(0.4);
+            top: 200px;
+            left: 200px;
+        }
+        70% {
+            transform: rotateZ(-180deg) scale(0.4);
+        }
+        100% {
+            transform: rotateZ(10deg) scale(0.4);
+            top: 300px;
+            left: 360px;
+        }
+    }
+    
+    @keyframes animB7 {
+        0% {
+            transform: rotateZ(120deg) scale(1.5);
+        }
+        50% {
+            transform: rotateZ(20deg) scale(1.5);
+            top: 240px;
+            left: 380px;
+        }
+        70% {
+            transform: rotateZ(60deg) scale(1.5);
+        }
+        100% {
+            transform: rotateZ(120deg) scale(1.5);
+            top: 450px;
+            left: 460px;
+        }
+    }
+    
+    @keyframes animB8 {
+        0% {
+            transform: rotateZ(-90deg) scale(0.7);
+        }
+        50% {
+            transform: rotateZ(80deg) scale(0.7);
+            top: -80px;
+            left: 350px;
+        }
+        70% {
+            transform: rotateZ(20deg) scale(0.7);
+        }
+        100% {
+            transform: rotateZ(-90deg) scale(0.7);
+            top: -60px;
+            left: 470px;
+        }
+    }
+    
+    @keyframes animB9 {
+        0% {
+            transform: rotateZ(90deg) scale(1.2);
+        }
+        50% {
+            transform: rotateZ(180deg) scale(1.2);
+            top: 480px;
+            left: 60px;
+        }
+        70% {
+            transform: rotateZ(180deg) scale(1.2);
+        }
+        100% {
+            transform: rotateZ(90deg) scale(1.2);
+            top: 500px;
+            left: -40px;
+        }
+    }
+    
+    @keyframes animB10 {
+        0% {
+            transform: rotateZ(90deg) scale(1.1);
+        }
+        50% {
+            transform: rotateZ(180deg) scale(1.1);
+            top: 120px;
+            left: 550px;
+        }
+        70% {
+            transform: rotateZ(180deg) scale(1.1);
+        }
+        100% {
+            transform: rotateZ(90deg) scale(1.1);
+            top: 200px;
+            left: 500px;
+        }
+    }
+    /******************************************************************************/
+    /************* NAV 2 ***********/
+    
+    .nav-2 {
+        background-color: red;
+        height: 40px;
+    }
+    
+    .nav-2 h3 {
+        text-align: center;
+        font-family: Lalezar;
+        direction: rtl;
+        font-size: 30px;
+        color: red;
+        animation: text .8s infinite linear;
+    }
+    /******************************************************************************/
+    /************************* PRT 2 ***********************/
+    
+    #PRT2 {
+        background-image: url(pic-4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 750px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px -2px 20px black;
+    }
+    
+    #PRT2 #title {
+        position: absolute;
+        margin-top: 260px;
+        font-size: 60px;
+        font-family: Changa;
+        text-shadow: 4px 4px white, -4px -4px rgb(255, 255, 255);
+        z-index: 2;
+    }
+    
+    #PRT2 p {
+        position: absolute;
+        margin-top: 380px;
+        justify-content: center;
+        padding-top: 40px;
+        font-size: 20px;
+        width: 750px;
+        font-family: Changa;
+        direction: rtl;
+        z-index: 2;
+    }
+    
+    #PRT2 div {
+        animation-play-state: paused;
+        z-index: 1;
+    }
+    
+    #PRT2:hover div {
+        animation-play-state: running;
+    }
+    /*****************Bacteria **********************/
+    
+    #PRT2 div {
+        position: absolute;
+    }
+    
+    .B1-PRT2 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B5.png");
+        background-size: cover;
+        height: 300px;
+        width: 300px;
+        display: inline-block;
+        top: 150px;
+        left: -40px;
+        animation: animB1--PRT2 6s infinite;
+        filter: drop-shadow(3px 3px 6px rgb(255, 0, 0));
+    }
+    
+    .B2-PRT2 {
+        position: absolute;
+        z-index: 0;
+        background-image: url("B6.png");
+        background-size: cover;
+        height: 400px;
+        width: 200px;
+        display: inline-block;
+        top: 400px;
+        left: 20px;
+        transform: scale(0.9);
+        animation: animB2--PRT2 6s infinite;
+        filter: drop-shadow(0px 0px 12px rgb(81, 255, 0));
+    }
+    
+    .B3-PRT2 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B7.png");
+        background-size: cover;
+        height: 200px;
+        width: 250px;
+        display: inline-block;
+        top: 380px;
+        right: 10px;
+        transform: scale(1.3);
+        animation: animB3--PRT2 6s infinite;
+        filter: drop-shadow(0px 0px 6px rgb(255, 0, 0));
+    }
+    
+    .B4-PRT2 {
+        position: absolute;
+        z-index: 1;
+        background-image: url("B4.png");
+        background-size: cover;
+        height: 400px;
+        width: 200px;
+        display: inline-block;
+        top: 60px;
+        right: 10px;
+        transform: scale(0.7);
+        animation: animB4--PRT2 6s infinite;
+        filter: drop-shadow(0px 0px 10px rgb(101, 0, 114));
+    }
+    /**********************************************************************/
+    /************* Animation Bacteria *************************/
+    
+    @keyframes animB1--PRT2 {
+        0% {
+            transform: rotateZ(90deg);
+        }
+        50% {
+            transform: rotateZ(180deg);
+            top: 80px;
+            left: -80px;
+        }
+        70% {
+            transform: rotateZ(-180deg);
+        }
+        100% {
+            transform: rotateZ(90deg);
+            top: 150px;
+            left: -40px;
+        }
+    }
+    
+    @keyframes animB2--PRT2 {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        50% {
+            transform: rotateZ(90deg);
+            top: 300px;
+            left: 100px;
+        }
+        70% {
+            transform: rotateZ(180deg);
+            top: 430px;
+        }
+        100% {
+            transform: rotateZ(0deg);
+            top: 400px;
+            left: 20px;
+        }
+    }
+    
+    @keyframes animB3--PRT2 {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        50% {
+            transform: rotateZ(90deg);
+            top: 520px;
+            right: 30px;
+        }
+        70% {
+            transform: rotateZ(180deg);
+        }
+        100% {
+            transform: rotateZ(0deg);
+            top: 380px;
+            right: 10px;
+        }
+    }
+    
+    @keyframes animB4--PRT2 {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        50% {
+            transform: rotateZ(-20deg);
+            top: 160px;
+            right: 90px;
+        }
+        70% {
+            transform: rotateY(20deg);
+        }
+        100% {
+            transform: rotateZ(0deg);
+            top: 60px;
+            right: 10px;
+        }
+    }
+    /***********************************************************************************************/
+    /******** PRT3 **************************************/
+    
+    #PRT3 {
+        background-image: url(PRT3.png);
+        background-size: cover;
+        background-position: center;
+        height: 1000px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #PRT3 h1 {
+        text-align: center;
+        font-size: 80px;
+        font-family: Cairo;
+        margin-top: 30px;
+        animation: text1 1s infinite;
+        height: 150px;
+        color: whitesmoke;
+        border-color: red;
+        text-shadow: 4px 4px rgb(93, 253, 0), -4px -4px rgb(93, 253, 0);
+        z-index: 3;
+    }
+    
+    #PRT3 #img1 {
+        background-image: url(C1.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -50px;
+        left: 20px;
+        filter: drop-shadow(0px 0px 12px rgb(201, 0, 0));
+        animation: anim3 10s infinite ease-in-out;
+        z-index: 1;
+    }
+    
+    #PRT3 #B1 {
+        background-image: url(B8.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        filter: drop-shadow(0px 0px 10px rgb(101, 0, 114));
+        animation: anim 5s infinite ease-in-out;
+    }
+    
+    #PRT3 #B2 {
+        background-image: url(B9.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 350px;
+        left: 20px;
+        filter: drop-shadow(0px 0px 10px rgb(101, 0, 114));
+        animation: anim1 10s infinite ease-in-out;
+    }
+    
+    #PRT3 #B3 {
+        background-image: url(B10.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 750px;
+        right: 20px;
+        filter: drop-shadow(0px 0px 10px rgb(101, 0, 114));
+        animation: anim1 20s infinite ease-in-out;
+    }
+    
+    #PRT3 #SP {
+        height: 700px;
+        width: 1000px;
+        margin-top: 250px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #PRT3 #SP #SP1 #img {
+        background-image: url(img1.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP #SP2 #img {
+        background-image: url(img2.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP #SP3 #img {
+        background-image: url(img3.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP #SP4 #img {
+        background-image: url(img4.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP #SP5 #img {
+        background-image: url(img5.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP #SP6 #img {
+        background-image: url(img6.png);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 290px;
+        height: 290px;
+    }
+    
+    #PRT3 #SP div h2 {
+        text-align: center;
+        font-family: Lalezar;
+        font-size: 25px;
+    }
+    
+    @keyframes anim {
+        0% {
+            transform: rotate(0deg) translate(-65px) rotate(0deg);
+        }
+        50% {
+            transform: rotate(360deg) translate(-85px) rotate(-360deg);
+        }
+        100% {
+            transform: rotate(0deg) translate(-65px);
+        }
+    }
+    
+    @keyframes anim1 {
+        0% {
+            transform: rotate(0deg) translate(-65px) rotate(0deg);
+        }
+        50% {
+            transform: rotate(-360deg) translate(85px) rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg) translate(-65px);
+        }
+    }
+    
+    @keyframes anim3 {
+        0% {
+            transform: rotateZ(20deg)rotate(0deg);
+        }
+        50% {
+            transform: rotateZ(-20deg);
+        }
+        100% {
+            transform: rotate(0deg) rotateZ(20deg);
+        }
+    }
+    
+    @keyframes text {
+        0% {}
+        100% {
+            color: white;
+        }
+    }
+    
+    @keyframes text1 {
+        0% {
+            border: none;
+        }
+        51% {
+            border-bottom: 2.5px solid rgb(255, 0, 0);
+        }
+        100% {
+            border: none;
+        }
+    }
+    /*****************************************************************************************/
+    /********* FOOTER ************/
+    
+    .footer {
+        background: #001f3f;
+    }
+    
+    .footer h3 {
+        text-align: center;
+        color: white;
+        font-family: Changa;
+        padding: 10px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    /*************************************************************************************************************************/
+    
+    @media (max-width: 768px) {
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .nav-1 {
+            height: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .B4,
+        .B5,
+        .B3,
+        .B8 {
+            display: none;
+        }
+        #flag {
+            top: 239px;
+        }
+        #PRT3 h1 {
+            font-size: 50px;
+        }
+        #PRT3 #img1 {
+            background-size: 70%;
+            left: -80px;
+        }
+        #PRT3 #B1 {
+            background-size: 50%;
+        }
+    }
+    
+    @media (max-width: 320px) {
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    @media (max-width: 425px) {
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    }
